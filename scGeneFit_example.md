@@ -58,7 +58,7 @@ a=plot_marker_selection(data, markers, names)
 
 
 
-![png](scGeneFit_example_files/scGeneFit_example_4_1.png)
+![png](figures/scGeneFit_example_4_1.png)
 
 
 ## Use of scGeneFit (center based constraints)
