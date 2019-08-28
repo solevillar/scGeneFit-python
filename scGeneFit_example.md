@@ -83,7 +83,7 @@ a=plot_marker_selection(data, markers, names)
 
 
 
-![png](scGeneFit_example_files/scGeneFit_example_6_1.png)
+![png](figures/scGeneFit_example_6_1.png)
 
 
 
@@ -144,7 +144,7 @@ a=plot_marker_selection(data, markers, names)
 
 
 
-![png](scGeneFit_example_files/scGeneFit_example_12_1.png)
+![png](figures/scGeneFit_example_12_1.png)
 
 
 ## Use of scGeneFit (center based constraints)
@@ -169,7 +169,7 @@ a=plot_marker_selection(data, markers, names)
 
 
 
-![png](scGeneFit_example_files/scGeneFit_example_14_1.png)
+![png](figures/scGeneFit_example_14_1.png)
 
 
 ### Example from second level of the hierarchy
@@ -205,31 +205,31 @@ for name in set(names):
 
 
 
-![png](scGeneFit_example_files/scGeneFit_example_17_1.png)
+![png](figures/scGeneFit_example_17_1.png)
 
 
 
-![png](scGeneFit_example_files/scGeneFit_example_17_2.png)
+![png](figures/scGeneFit_example_17_2.png)
 
 
 
-![png](scGeneFit_example_files/scGeneFit_example_17_3.png)
+![png](figures/scGeneFit_example_17_3.png)
 
 
 
-![png](scGeneFit_example_files/scGeneFit_example_17_4.png)
+![png](figures/scGeneFit_example_17_4.png)
 
 
 
-![png](scGeneFit_example_files/scGeneFit_example_17_5.png)
+![png](figures/scGeneFit_example_17_5.png)
 
 
 
-![png](scGeneFit_example_files/scGeneFit_example_17_6.png)
+![png](figures/scGeneFit_example_17_6.png)
 
 
 
-![png](scGeneFit_example_files/scGeneFit_example_17_7.png)
+![png](figures/scGeneFit_example_17_7.png)
 
 
 
