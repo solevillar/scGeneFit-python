@@ -8,6 +8,7 @@ from matplotlib.pyplot import scatter
 from mpl_toolkits.mplot3d import Axes3D
 import seaborn as sns
 from sklearn.manifold import TSNE
+import sklearn
 
 
 def get_markers(data, labels, num_markers, sampling_rate=1, n_neighbors=3, epsilon=10, max_constraints=1000, use_centers=False):
@@ -220,3 +221,35 @@ def plot_marker_selection(data, markers, names, perplexity=40):
     plt.legend(bbox_to_anchor=(1, 1))
     plt.subplots_adjust(right=0.7)
     return fig
+
+
+def one_vs_all_selection(data, labels, num_bins=20):
+    data_by_label = {}
+    unique_labels = list(set(labels))
+    number_classes = len(unique_labels)
+    [N, d] = data.shape
+    for lab in unique_labels:
+        X = [data[x, :] for x in range(len(labels)) if labels[x] == lab]
+        data_by_label[lab] = X
+    markers = [None for i in range(number_classes)]
+    bins = data.max() / num_bins * range(num_bins + 1)
+    for idx in range(number_classes):
+        c = unique_labels[idx]
+        current_class = np.array(data_by_label[c])
+        others = np.concatenate([data_by_label[lab] for lab in unique_labels if lab != c])
+        big_dist = 0
+        for gene in range(d):
+            if gene not in markers[0:idx]:
+                [h1, b1] = np.histogram(current_class[:, gene], bins)
+                h1 = np.array(h1).reshape(1, -1) / current_class.shape[0]
+                [h2, b2] = np.histogram(others[:, gene], bins)
+                h2 = np.array(h2).reshape(1, -1) / others.shape[0]
+                dist = -sklearn.metrics.pairwise.additive_chi2_kernel(h1, h2)
+                if dist > big_dist:
+                    markers[idx] = gene
+                    big_dist = dist
+    return markers
+
+
+
+
