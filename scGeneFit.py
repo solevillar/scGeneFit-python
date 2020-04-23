@@ -11,14 +11,14 @@ from sklearn.manifold import TSNE
 import sklearn
 
 
-def get_markers(data, labels, num_markers, sampling_rate=1, n_neighbors=3, epsilon=10, max_constraints=1000, use_centers=False):
+def get_markers(data, labels, num_markers, sampling_rate=1, n_neighbors=3, epsilon=1, max_constraints=1000, use_centers=True, verbose=True):
     """marker selection algorithm
     data: Nxd numpy array with point coordinates, N: number of points, d: dimension
     labels: list with labels (N labels, one per point)
     num_markers: target number of markers to select. num_markers<d
     sampling_rate: selects constraints from a random sample of proportion sampling_rate (default 1)
     n_neighbors: chooses the constraints from n_neighbors nearest neighbors (default 3)
-    epsilon: Delta is chosen to be epsilon times the norm of the smallest constraint (default 10)
+    epsilon: Delta is chosen to be epsilon times the norm of the smallest constraint (default 1)
     max_constraints: maximum number of constraints to consider (default 1000)
     use_centers: constraints based on distance to centers to different clusters"""
     (N, d) = data.shape
@@ -34,9 +34,11 @@ def get_markers(data, labels, num_markers, sampling_rate=1, n_neighbors=3, epsil
     if num_cons > max_constraints:
         p = np.random.permutation(num_cons)[0:max_constraints]
         constraints = constraints[p, :]
-    print('Solving a linear program with {} variables and {} constraints'.format(constraints.shape[1],constraints.shape[0]))
+    if verbose:
+        print('Solving a linear program with {} variables and {} constraints'.format(constraints.shape[1],constraints.shape[0]))
     sol = lp_markers(constraints, num_markers, smallest_norm * epsilon)
-    print('Time elapsed: {} seconds'.format(time.time() - t))
+    if verbose:
+        print('Time elapsed: {} seconds'.format(time.time() - t))
     x = sol['x'][0:d]
     markers = sorted(range(len(x)), key=lambda i: x[i], reverse=True)[: num_markers]
     return markers
