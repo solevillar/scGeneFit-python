@@ -103,7 +103,7 @@ a=plot_marker_selection(data, markers, names)
 
 
 
-![png](https://github.com/solevillar/scGeneFit-python/tree/master/imgs/output_11_1.png)
+![png](https://raw.githubusercontent.com/solevillar/scGeneFit-python/master/imgs/output_11_1.png)
 
 
 ## Use of scGeneFit (pairwise distance constraints)
@@ -144,7 +144,7 @@ a=plot_marker_selection(data, markers, names)
 
 
 
-![png](https://github.com/solevillar/scGeneFit-python/tree/master/imgs/output_14_1.png)
+![png](https://raw.githubusercontent.com/solevillar/scGeneFit-python/master/imgs/output_14_1.png)
 
 
 ## Use of scGeneFit (pairwise center based constraints)
@@ -186,7 +186,7 @@ a=plot_marker_selection(data, markers, names)
 
 
 
-![png](https://github.com/solevillar/scGeneFit-python/tree/master/imgs/output_17_1.png)
+![png](https://raw.githubusercontent.com/solevillar/scGeneFit-python/master/imgs/output_17_1.png)
 
 
 ## One vs all markers
@@ -216,7 +216,7 @@ a=plot_marker_selection(data, markers2, names)
 
 
 
-![png](https://github.com/solevillar/scGeneFit-python/tree/master/imgs/output_20_1.png)
+![png](https://raw.githubusercontent.com/solevillar/scGeneFit-python/master/imgs/output_20_1.png)
 
 
 # Zeisel example
@@ -270,7 +270,7 @@ a=plot_marker_selection(data, markers, names[0])
 
 
 
-![png](https://github.com/solevillar/scGeneFit-python/tree/master/imgs/output_25_1.png)
+![png](https://raw.githubusercontent.com/solevillar/scGeneFit-python/master/imgs/output_25_1.png)
 
 
 ## Use of scGeneFit (pairwise distance constraints)
@@ -346,7 +346,7 @@ a=plot_marker_selection(data, markers, names[0])
 
 
 
-![png](https://github.com/solevillar/scGeneFit-python/tree/master/imgs/output_31_1.png)
+![png](https://raw.githubusercontent.com/solevillar/scGeneFit-python/master/imgs/output_31_1.png)
 
 
 
@@ -380,31 +380,31 @@ for name in set(names[0]):
 
 
 
-![png](https://github.com/solevillar/scGeneFit-python/tree/master/imgs/output_34_1.png)
+![png](https://raw.githubusercontent.com/solevillar/scGeneFit-python/master/imgs/output_34_1.png)
 
 
 
-![png](https://github.com/solevillar/scGeneFit-python/tree/master/imgs/output_34_2.png)
+![png](https://raw.githubusercontent.com/solevillar/scGeneFit-python/master/imgs/output_34_2.png)
 
 
 
-![png](https://github.com/solevillar/scGeneFit-python/tree/master/imgs/output_34_3.png)
+![png](https://raw.githubusercontent.com/solevillar/scGeneFit-python/master/imgs/output_34_3.png)
 
 
 
-![png](https://github.com/solevillar/scGeneFit-python/tree/master/imgs/output_34_4.png)
+![png](https://raw.githubusercontent.com/solevillar/scGeneFit-python/master/imgs/output_34_4.png)
 
 
 
-![png](https://github.com/solevillar/scGeneFit-python/tree/master/imgs/output_34_5.png)
+![png](https://raw.githubusercontent.com/solevillar/scGeneFit-python/master/imgs/output_34_5.png)
 
 
 
-![png](https://github.com/solevillar/scGeneFit-python/tree/master/imgs/output_34_6.png)
+![png](https://raw.githubusercontent.com/solevillar/scGeneFit-python/master/imgs/output_34_6.png)
 
 
 
-![png](https://github.com/solevillar/scGeneFit-python/tree/master/imgs/output_34_7.png)
+![png](https://raw.githubusercontent.com/solevillar/scGeneFit-python/master/imgs/output_34_7.png)
 
 
 
@@ -439,7 +439,7 @@ a=plot_marker_selection(data, markers2, names[0])
 
 
 
-![png](https://github.com/solevillar/scGeneFit-python/tree/master/imgs/output_38_1.png)
+![png](https://raw.githubusercontent.com/solevillar/scGeneFit-python/master/imgs/output_38_1.png)
 
 
 
