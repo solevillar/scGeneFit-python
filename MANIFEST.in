@@ -1,0 +1,9 @@
+include README.md
+include scGeneFit/data_files/CITEseq_names.mat
+include scGeneFit/data_files/CITEseq-labels.mat 
+include scGeneFit/data_files/CITEseq.mat 
+include scGeneFit/data_files/CITseq.mat
+include scGeneFit/data_files/zeisel_data.mat
+include scGeneFit/data_files/zeisel_labels1.mat 
+include scGeneFit/data_files/zeisel_labels2.mat 
+include scGeneFit/data_files/zeisel_names.mat
