@@ -349,8 +349,12 @@ class __ScGeneInstance:
         return np.mean(val)
     
     def performance(self, markers):
-        self.clf.fit(self.X_train[:,markers], self.y_train)
-        return self.clf.score(self.X_test[:,markers], self.y_test)
+        if self.hierarchy:
+            self.clf.fit(self.X_train[:,markers], self.y_train[0])
+            return self.clf.score(self.X_test[:,markers], self.y_test[0])
+        else:
+            self.clf.fit(self.X_train[:,markers], self.y_train)
+            return self.clf.score(self.X_test[:,markers], self.y_test)
 
 def load_example_data(name):
     if name=="CITEseq":
