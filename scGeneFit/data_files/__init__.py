@@ -1,4 +1,5 @@
 
+import scipy.io
 try:
     import importlib.resources as importlib_resources
 except ImportError:
@@ -7,4 +8,4 @@ except ImportError:
 
 def get_data(filename):
     with importlib_resources.path(__name__, filename) as foo:
-        return str(foo)
+        return scipy.io.loadmat(str(foo))
