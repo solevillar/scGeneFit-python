@@ -7,5 +7,6 @@ except ImportError:
     import importlib_resources
 
 def get_data(filename):
-    with importlib_resources.path(__name__, filename) as foo:
+    src = importlib_resources.files(__name__).joinpath(filename)
+    with importlib_resources.as_file(src) as foo:
         return scipy.io.loadmat(str(foo))
