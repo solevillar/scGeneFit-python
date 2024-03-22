@@ -14,7 +14,7 @@ setuptools.setup(
      url="https://github.com/solevillar/scGeneFit-python",
      packages=setuptools.find_packages(),
      include_package_data=True,
-     install_requires=['numpy', 'matplotlib', 'scipy', 'sklearn'],
+     install_requires=['numpy', 'matplotlib', 'scipy', 'scikit-learn'],
      classifiers=[
          "Programming Language :: Python :: 3",
          "License :: OSI Approved :: MIT License",
