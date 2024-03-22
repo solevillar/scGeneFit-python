@@ -254,6 +254,12 @@ def circles_example(N=30, d=5):
 
 def plot_marker_selection(data, markers, names, perplexity=40):
     print('Computing TSNE embedding')
+    # code fix to deal with exceptions if there is a particular cell class type with n < 40
+    # automatically re-scales perplexity in these cases
+    if len(data) < 40:
+        perplexity = len(data) - 1
+    else:
+        perplexity = 40
     t = time.time()
     X_original = sklearn.manifold.TSNE(
         n_components=2, perplexity=perplexity).fit_transform(data)
