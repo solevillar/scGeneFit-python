@@ -364,7 +364,7 @@ class __ScGeneInstance:
 
 def load_example_data(name):
     if name=="CITEseq":
-        a = scipy.io.loadmat(data_files.get_data("CITEseq.mat"))
+        a = data_files.get_data("CITEseq.mat")
         data= a['G'].T
         N,d=data.shape
         #transformation from integer entries 
@@ -372,32 +372,32 @@ def load_example_data(name):
         for i in range(N):
             data[i,:]=data[i,:]/np.linalg.norm(data[i,:])
         #load labels from file
-        a = scipy.io.loadmat(data_files.get_data("CITEseq-labels.mat"))
+        a = data_files.get_data("CITEseq-labels.mat")
         l_aux = a['labels']
         labels = np.array([i for [i] in l_aux])
         #load names from file
-        a = scipy.io.loadmat(data_files.get_data("CITEseq_names.mat"))
+        a = data_files.get_data("CITEseq_names.mat")
         names=[a['citeseq_names'][i][0][0] for i in range(N)]
         return [data, labels, names]
     elif name=="zeisel":
         #load data from file
-        a = scipy.io.loadmat(data_files.get_data("zeisel_data.mat"))
+        a = data_files.get_data("zeisel_data.mat")
         data= a['zeisel_data'].T
         N,d=data.shape
 
         #load labels (first level of the hierarchy) from file
-        a = scipy.io.loadmat(data_files.get_data("zeisel_labels1.mat"))
+        a = data_files.get_data("zeisel_labels1.mat")
         l_aux = a['zeisel_labels1']
         l_0=[l_aux[i][0] for i in range(l_aux.shape[0])]
         #load labels (second level of the hierarchy) from file
-        a = scipy.io.loadmat(data_files.get_data("zeisel_labels2.mat"))
+        a = data_files.get_data("zeisel_labels2.mat")
         l_aux = a['zeisel_labels2']
         l_1=[l_aux[i][0] for i in range(l_aux.shape[0])]
         #construct an array with hierarchy labels
         labels=np.array([l_0, l_1])
 
         # load names from file 
-        a = scipy.io.loadmat(data_files.get_data("zeisel_names.mat"))
+        a = data_files.get_data("zeisel_names.mat")
         names0=[a['zeisel_names'][i][0][0] for i in range(N)]
         names1=[a['zeisel_names'][i][1][0] for i in range(N)]
         return [data, labels, [names0,names1]]
